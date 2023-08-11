@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .secondary{
   color: var(--secondary);
 }
+/* Header */
 #fh5co-header,
 .fh5co-cover {
   background-size: cover;
@@ -103,7 +104,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #001a2c9d;
+  background: #001c30c5;;
 }
 #fh5co-header .display-t,
 .fh5co-cover .display-t {
@@ -391,6 +392,47 @@ h1, h2, h3, h4, h5, h6, figure {
   color: var(--white);
   border-color: #97FEED;
 }
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 10em;
+  font-size: 18px;
+}
+/* Hamburger Checkbox */
+input[type=checkbox] {
+  display: none;
+  color: var(--white);
+} 
+input[type=checkbox]:hover {
+  color: var(--white);
+  border-color: #97FEED;
+} 
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* Navbar Responsive */
+@media screen and (max-width: 768px) {
+  .menu{
+    display:none;
+      position: absolute;
+      background-color:#0B666A;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 12px 0;
+  }
+  input[type=checkbox]:checked ~ .menu{
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  }
+    
+
 
 #fh5co-consult {
   display: -webkit-box;
@@ -613,6 +655,10 @@ input[type="text"] {
   padding: 6px !important;
   margin: 0px !important;
 }
+
+
+
+
 /* Loading Screen */
 .fh5co-loader {
   position: fixed;
